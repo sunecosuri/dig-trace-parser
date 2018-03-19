@@ -1,6 +1,6 @@
 {
   "name": "dig-trace-parser",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "dig command wrapper created by node",
   "main": "index.js",
   "scripts": {
