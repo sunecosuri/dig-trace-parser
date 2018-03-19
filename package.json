@@ -1,0 +1,61 @@
+{
+  "name": "dig-trace-parser",
+  "version": "1.0.0",
+  "description": "dig command wrapper created by node",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && nyc ava test/*.js"
+  },
+  "keywords": [
+    "domain",
+    "dns",
+    "dig",
+    "whois"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sunecosuri/dig-trace-parser.git"
+  },
+  "author": "sunecosuri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunecosuri/dig-trace-parser/issues"
+  },
+  "homepage": "https://github.com/sunecosuri/dig-trace-parser#readme",
+  "xo": {
+    "semicolon": false,
+    "space": 2,
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "always",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ],
+      "no-negated-condition": "off",
+      "no-useless-escape": "off",
+      "unicorn/prefer-starts-ends-with": "off",
+      "no-await-in-loop": "off"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "nyc": "^11.2.1",
+    "xo": "^0.20.3"
+  }
+}

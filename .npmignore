@@ -1,0 +1,5 @@
+.git*
+**/*.test.js
+.npmrc
+test/**/*.*
+/node_modules
