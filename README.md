@@ -12,8 +12,8 @@ npm i dig-trace-parser
 const dig = require('dig-trace-parser')
 
 const ip = async () => ({
-const domain = 'www.example.com';
-const result = await dig(domain);
-console.log(result);　 // ['93.184.216.34']
+  const domain = 'www.example.com';
+  const result = await dig(domain);
+  console.log(result);　 // ['93.184.216.34']
 })
 ```
