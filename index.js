@@ -6,8 +6,8 @@ async function parseDig(output) {
   const result = []
   for (const line of lines) {
     if (/^A (.*) from/.test(line)) {
-      const scn = line.match(/^A (.*) from/)[1];
-      result.push(scn)      
+      const scn = line.match(/^A (.*) from/)[1]
+      result.push(scn)
     }
   }
   return result
