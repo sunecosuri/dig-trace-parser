@@ -1,6 +1,5 @@
 # dig-trace-parser
-dig command wrapper created by node
-
+Parser resulting from the Dig command (+ trace option) created by the node.
 
 ```ｓｈ
 npm i dig-trace-parser
