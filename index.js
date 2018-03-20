@@ -27,10 +27,10 @@ function dig(name) {
 
     const cmd = format('dig %s +time=1 +retry=0 +trace +short', name)
     const std = await exec(cmd)
-    const result = await parseDig(std.stdout).catch((err) => {
+    const results = await parseDig(std.stdout).catch((err) => {
       reject(err)
     })
-    resolve(result)
+    resolve(results)
   })
 }
 
