@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/sunecosuri/dig-trace-parser.svg?branch=master)](https://travis-ci.org/sunecosuri/dig-trace-parser)
+
+
 # dig-trace-parser
 Parser resulting from the Dig command (+ trace option) created by the node.
 
