@@ -3,11 +3,18 @@ const exec = promisify(require('child_process').exec)
 
 async function parseDig(output) {
   const lines = output.split(/\n/)
-  const result = []
+  const result = {
+    A: [],
+    CNAME: [],
+  }
   for (const line of lines) {
     if (/^A (.*) from/.test(line)) {
-      const scn = line.match(/^A (.*) from/)[1]
-      result.push(scn)
+      const scn = line.match(/^A (.*). from/)[1]
+      result.A.push(scn)
+    }
+    if (/^CNAME (.*) from/.test(line)) {
+      const scn = line.match(/^CNAME (.*). from/)[1]
+      result.CNAME.push(scn)
     }
   }
   return result

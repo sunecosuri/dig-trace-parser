@@ -10,11 +10,11 @@ test('default export', (t) => {
 test('when exist domain', async (t) => {
   const domain = 'www.example.com'
   const result = await dig(domain)
-  t.deepEqual(result, ['93.184.216.34'])
+  t.deepEqual(result, { A: ['93.184.216.3'], CNAME: [] })
 })
 
 test('when not exist domain', async (t) => {
   const domain = 'example.test'
   const result = await dig(domain)
-  t.deepEqual(result, [])
+  t.deepEqual(result, { A: [], CNAME: [] })
 })
