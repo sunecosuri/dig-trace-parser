@@ -1,5 +1,10 @@
 declare module 'dig-trace-parser' {
-    function dig(name: string): Promise<string[]>
+    interface IRecord {
+        A: string[]
+        CNAME: string[]
+    }
+
+    function dig(name: string): Promise<IRecord>
     namespace dig { }
     export = dig
 }
