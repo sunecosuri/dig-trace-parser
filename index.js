@@ -32,10 +32,10 @@ function dig(name) {
       throw new TypeError('name (string) is required')
     }
 
-    const cmd = format('dig %s +time=1 +retry=0 +trace +short', name)
-    const { stdout } = await exec(cmd)
-    console.log('出力', stdout, stdout.split(/\n/))
+    const cmd = format('dig %s +time=3 +retry=1 +trace +short', name)
     console.log('コマンド', cmd)
+    const { stdout } = await exec(cmd).catch((e) => '')
+    console.log('出力', stdout, stdout.split(/\n/))
     const results = await parseDig(stdout).catch((err) => {
       reject(err)
     })
