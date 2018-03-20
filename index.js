@@ -17,7 +17,7 @@ async function parseDig(output) {
  * Dig trace option wrapper method.
  *
  * @param {String} name
- * @returns {Array} results
+ * @returns {String[]} results
  */
 function dig(name) {
   return new Promise(async (resolve, reject) => {
