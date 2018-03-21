@@ -35,8 +35,8 @@ function dig(name) {
 
     const cmd = format('dig %s +time=3 +retry=1 +trace +short', name)
     console.log('コマンド', cmd)
-    const output = await exec(cmd).catch(() => '')
-    console.log('出力', output.stdout, output.stderr)
+    const output = await exec(cmd)
+    console.log('出力', output, output.stdout, output.stderr)
     const results = await parseDig(output.stdout).catch((err) => {
       reject(err)
     })
