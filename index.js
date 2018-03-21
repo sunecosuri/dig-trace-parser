@@ -2,6 +2,7 @@ const { format, promisify } = require('util')
 const exec = promisify(require('child_process').exec)
 
 async function parseDig(output) {
+  console.log('parseDigの結果', output)
   const lines = output.split(/\n/)
   const result = {
     A: [],
@@ -34,9 +35,9 @@ function dig(name) {
 
     const cmd = format('dig %s +time=3 +retry=1 +trace +short', name)
     console.log('コマンド', cmd)
-    const { stdout } = await exec(cmd).catch(() => '')
-    console.log('出力', stdout, stdout.split(/\n/))
-    const results = await parseDig(stdout).catch((err) => {
+    const output = await exec(cmd).catch(() => '')
+    console.log('出力', output.stdout, output.stderr)
+    const results = await parseDig(output.stdout).catch((err) => {
       reject(err)
     })
     resolve(results)
