@@ -59,8 +59,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "ava": "^1.4.1",
+    "ava": "^2.0.0",
     "nyc": "15.1.0",
-    "xo": "^0.24.0"
+    "xo": "^0.42.0"
   }
 }
